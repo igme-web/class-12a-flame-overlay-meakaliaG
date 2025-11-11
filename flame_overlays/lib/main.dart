@@ -34,6 +34,15 @@ class MainApp extends StatelessWidget {
             'main': (context, game) {
               return mainOverlay(context, game);
             },
+            'pause': (context, game) {
+              return pauseOverlay(context, game);
+            },
+            'info': (context, game) {
+              return InfoOverlay(game: game as OverlayTutorial);
+            },
+            'settings': (context, game) {
+              return settingsOverlay(context, game);
+            },
           },
           initialActiveOverlays: const ['title'],
         ),

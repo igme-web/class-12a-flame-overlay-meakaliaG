@@ -34,6 +34,12 @@ class OverlayTitle extends StatelessWidget {
               },
               child: const Text('Start Game'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                game.overlays.add('settings');
+              },
+              child: const Text('Settings'),
+            ),
           ],
         ),
       ),

@@ -21,19 +21,29 @@ Widget mainOverlay(BuildContext context, game) {
           ),
           IconButton(
             onPressed: () {
-              // TO-DO
+              game.paused = true;
+              game.overlays.add('pause');
             },
             icon: Icon(Icons.pause),
           ),
           IconButton(
             onPressed: () {
-              // TO-DO
+              game.paused = false;
+              game.overlays.remove('pause');
+            },
+            icon: Icon(Icons.play_arrow),
+          ),
+          IconButton(
+            onPressed: () {
+              game.paused = true;
+              game.overlays.add('settings');
             },
             icon: Icon(Icons.settings),
           ),
           IconButton(
             onPressed: () {
-              // TO-DO
+              game.paused = true;
+              game.overlays.add('info');
             },
             icon: Icon(Icons.info),
           ),
